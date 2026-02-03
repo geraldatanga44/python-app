@@ -27,7 +27,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images:
-            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+            geraldatanga44/python-app
             # The 'semver' type automatically parses 'v1.2.3'
           tags: |
             type=semver,pattern={{version}}
