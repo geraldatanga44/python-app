@@ -44,6 +44,13 @@ jobs:
     needs: ci
     runs-on: self-hosted
     steps:
+      - name: Download Argo binary
+        shell: bash
+        run: |
+          curl -ksSL -o argocd https://argocd-server.algocd/download/argocd-linux-amd64
+          chmod +x argocd
+          mv ./argocd /usr/local/bin/argocd
+
       - name: Argocd app sync
         shell: bash
         run: |
