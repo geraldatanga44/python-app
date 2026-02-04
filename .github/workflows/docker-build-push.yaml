@@ -10,7 +10,7 @@ on:
       - main
 
 jobs:
-  docker:
+  ci:
     runs-on: self-hosted
     steps:
       - name: Login to Docker Hub
@@ -40,3 +40,12 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+  cd:
+    needs: ci
+    runs-on: self-hosted
+    steps:
+      - name: Argocd app sync
+        shell: bash
+        run: |
+          argocd login argocd-server.algocd --insecure --grpc-web --username admin --password ${{ secrets.ARGO_PASSWORD }}
+          argocd app sync python-app
