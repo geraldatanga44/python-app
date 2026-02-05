@@ -15,7 +15,7 @@ metadata:
     # Core integrations (uncomment and replace as needed)
     # github.com/project-slug: my-org/my-repo
     gitlab.com/project-slug: geraldatanga44/python-app
-    # backstage.io/techdocs-ref: dir:.
+    backstage.io/techdocs-ref: dir:.
     # sonarqube.org/project-key: my-project-key
 spec:
   type: service # Options: service, library, website, tool

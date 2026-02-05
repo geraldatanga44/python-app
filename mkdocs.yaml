@@ -1,0 +1,11 @@
+site_name: python-app Docs
+site_description: Documentation for python-app
+repo_url: https://github.com/geraldatanga44/python-app
+
+plugins:
+  - techdocs-core # This is mandatory for Backstage integration
+
+nav:
+  - Home: docs/index.md
+  # - API Reference: api-reference.md
+  # - Troubleshooting: troubleshooting.md
