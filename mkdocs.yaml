@@ -1,6 +1,7 @@
 site_name: python-app Docs
 site_description: Documentation for python-app
 repo_url: https://github.com/geraldatanga44/python-app
+edit_uri: edit/main/docs/
 
 plugins:
   - techdocs-core # This is mandatory for Backstage integration
