@@ -1,0 +1,27 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: python-app # Unique ID (kebab-case recommended)
+  description: A brief description of what this component does.
+  tags:
+    - java
+    - rest-api
+    - payment-processing
+  links: # Shortcuts shown on the entity page
+    - url: https://admin.example.com
+      title: Admin Dashboard
+      icon: dashboard
+  annotations:
+    # Core integrations (uncomment and replace as needed)
+    # github.com/project-slug: my-org/my-repo
+    gitlab.com/project-slug: geraldatanga44/python-app
+    # backstage.io/techdocs-ref: dir:.
+    # sonarqube.org/project-key: my-project-key
+spec:
+  type: service # Options: service, library, website, tool
+  lifecycle: production # Options: experimental, production, deprecated
+  owner: development # Must match a User or Group entity name
+  # system: payment-platform     # Optional: Group components into a larger System
+  # dependsOn:                   # Optional: Define dependencies on other components
+  #   - component:postgresql-db
+  #   - resource:s3-bucket
